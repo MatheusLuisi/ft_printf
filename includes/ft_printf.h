@@ -17,6 +17,14 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *str, ...);
+int	check_format(va_list args, char c);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putnbr(int n);
+int	ft_putnbr_unsigned(unsigned int n);
+int	ft_puthex_lower(unsigned int n);
+int	ft_puthex_upper(unsigned int n);
+int	ft_putadress(unsigned long nb);
 
 #endif

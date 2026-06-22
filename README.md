@@ -30,24 +30,27 @@ this generates the `ft_printf` function.
 
 | Function | Description |
 | ---------- |-------------|
+|[ft_printf](/src/ft_printf.c)|xxxx|
+|[check_format](/src/ft_printf.c)|xxxx|
+|[ft_putchar](/src/ft_putchar.c)|xxxx|
+|[ft_putstr](/src/ft_putstr.c)|xxxx|
+|[ft_putnbr_unsigned](/src/ft_putnbr_un:signed.c)|xxxx|
+|[ft_puthex_lower](/src/ft_puthex_lower.c)|xxxx|
+|[ft_puthex_upper](/src/ft_puthex_upper.c)|xxxx|
+|[ft_putadress](/src/ft_putadress.c)|xxxx|
 |[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-|[x]()|xxxx|
-
-
 
 ----
+## main.c
 
+```C
+
+
+```
 ## Resources
 
--[name](link)
--[name](link)
+-[What are variadic functions (va_list) in C?](https://www.youtube.com/watch?app=desktop&v=oDC208zvsdg)
+-[Variadic Functions](https://azrael.digipen.edu/~mmead/www/Courses/CS120/VariadicFunctions.html?source=post_page-----110893c86d8c---------------------------------------#STACKS)
 -[name](link)
 -[name](link)
 -[name](link)
