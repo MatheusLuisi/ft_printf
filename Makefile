@@ -14,7 +14,7 @@ SRCS        = 	\
               ft_putchar.c \
               ft_putnbr.c \
               ft_putnbr_unsigned.c \
-	      ft_putstr.c \
+              ft_putstr.c \
               ft_puthex_lower.c \
               ft_puthex_upper.c \
               ft_putadress.c 

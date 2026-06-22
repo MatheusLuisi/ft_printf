@@ -5,63 +5,60 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpinto-l <mpinto-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/09 11:57:13 by mpinto-l          #+#    #+#             */
-/*   Updated: 2026/06/09 11:59:11 by mpinto-l         ###   ########.fr       */
+/*   Created: 2026/06/22 12:03:00 by mpinto-l          #+#    #+#             */
+/*   Updated: 2026/06/22 12:06:09 by mpinto-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int check_format(va_list args, char c)
+int	check_format(va_list args, char flag)
 {
-	int printed;
+	int	count;
 
-	printed = 0;
-	if (c == 'd' || c == 'i')
-		printed = ft_putnbr(va_arg(args, int));
-	else if (c == 'c')
-		printed = ft_putchar(va_arg(args, int));
-	else if (c == 's')
-		printed = ft_putstr(va_arg(args, char *));
-	else if (c == 'x')
-		printed = ft_puthex_lower(va_arg(args, unsigned int));	
-	else if (c == 'X')
-		printed = ft_puthex_upper(va_arg(args, unsigned int));
-	else if (c == 'u')
-		printed = ft_putnbr_unsigned(va_arg(args, unsigned int));
-	else if (c == 'p')
+	count = 0;
+	if (flag == 'd' || flag == 'i')
+		count = ft_putnbr(va_arg(args, int));
+	else if (flag == 'flag')
+		count = ft_putchar(va_arg(args, int));
+	else if (flag == 's')
+		count = ft_putstr(va_arg(args, char *));
+	else if (flag == 'x')
+		count = ft_puthex_lower(va_arg(args, unsigned int));
+	else if (flag == 'X')
+		count = ft_puthex_upper(va_arg(args, unsigned int));
+	else if (flag == 'u')
+		count = ft_putnbr_unsigned(va_arg(args, unsigned int));
+	else if (flag == 'p')
 	{
-		printed = ft_putstr("0x");
-		printed = ft_putadress(va_arg(args, unsigned long long));
+		count = ft_putstr("0x");
+		count = ft_putadress(va_arg(args, unsigned long long));
 	}
-	else if (c == '%')
-	  return (ft_putchar('%'));
-	return (printed);
+	else if (flag == '%')
+		return (ft_putchar('%'));
+	return (count);
 }
-
 
 int	ft_printf(const char *str, ...)
 {
-	int i;
-	int printed;
-	va_list args;
+	int		i;
+	int		count;
+	va_list	args;
 
 	i = 0;
-	printed = 0;
+	count = 0;
 	va_start(args, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
 		{
-			if(str[i + 1] != '\0')
-				printed += check_format(args, str[i + 1]);
+			if (str[i + 1] != '\0')
+				count += check_format(args, str[i + 1]);
 		}
-		else 
-			printed += ft_putchar(str[i]);
+		else
+			count += ft_putchar(str[i]);
 		i++;
 	}
 	va_end(args);
-	return (printed);
+	return (count);
 }
-
-
