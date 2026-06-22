@@ -37,8 +37,8 @@ this generates the `ft_printf` function.
 |[ft_putnbr_unsigned](/src/ft_putnbr_un:signed.c)|xxxx|
 |[ft_puthex_lower](/src/ft_puthex_lower.c)|xxxx|
 |[ft_puthex_upper](/src/ft_puthex_upper.c)|xxxx|
-|[ft_putadress](/src/ft_putadress.c)|xxxx|
-|[x]()|xxxx|
+|[ft_putadress](/src/ft_flag_p.c)|xxxx|
+|[ft_putpointer](/src/ft_flag_p.c)|xxxx|
 
 ----
 ## main.c

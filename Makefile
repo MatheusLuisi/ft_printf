@@ -17,7 +17,7 @@ SRCS        = 	\
               ft_putstr.c \
               ft_puthex_lower.c \
               ft_puthex_upper.c \
-              ft_putadress.c 
+              ft_flag_p.c 
 
 
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
@@ -39,7 +39,6 @@ $(OBJ_DIR):
 
 clean:
 	$(RM) -r $(OBJ_DIR)
-	$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)

@@ -6,7 +6,7 @@
 /*   By: mpinto-l <mpinto-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:41:19 by mpinto-l          #+#    #+#             */
-/*   Updated: 2026/06/09 12:10:11 by mpinto-l         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:04:08 by mpinto-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int	ft_putnbr_unsigned(unsigned int n);
 int	ft_puthex_lower(unsigned int n);
 int	ft_puthex_upper(unsigned int n);
 int	ft_putadress(unsigned long nb);
+int	ft_putpointer(void *ptr);
 
 #endif
