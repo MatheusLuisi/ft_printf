@@ -15,14 +15,16 @@
 int	ft_putstr(char *str)
 {
 	int	i;
+	int	count;
 
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 	i = 0;
+	count = 0;
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		count += ft_putchar(str[i]);
 		i++;
 	}
-	return (i);
+	return (count);
 }
