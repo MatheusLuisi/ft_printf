@@ -63,6 +63,6 @@ cc main.c -L. -lftprintf -o program
 
 ### AI Usage
 
-AI usage: During the implementation of the C functions, Claude was used as a learning aid — configured to explain concepts and point out what was wrong rather than provide direct answers.
+AI usage: During the implementation of the C functions, Claude was used as a learning aid.
 
 
